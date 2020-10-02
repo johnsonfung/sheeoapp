@@ -1,0 +1,333 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+
+$bkrp-black: #161b21;
+$bkrp-grey: #2e373c;
+$bkrp-lightBlue: #dae7f7;
+$bkrp-green: #719a4e;
+$bkrp-success: #28a745;
+$bkrp-lightGreen: #bbdb90;
+$bkrp-white: #fff;
+$bkrp-offWhite: #eee;
+$bkrp-cream: #fff5d6;
+$bkrp-yellow: #f5bd36;
+$bkrp-redlight: #e2381f;
+$bkrp-red: #e51f1e;
+
+$sheeo-white: #fff;
+$sheeo-blue: #0b84a8;
+$sheeo-black: #000;
+$sheeo-red: #ce2025;
+$sheeo-purple: #7515d9;
+$sheeo-grey: #9c9c9c;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+.rootContainer {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 60px;
+  .navBar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: $sheeo-white;
+    padding: 10px;
+    top: 0px;
+    border-bottom: solid 5px $sheeo-blue;
+    .logo {
+      color: $bkrp-offWhite;
+      font-size: 24px;
+      font-weight: 400;
+      float: left;
+      img {
+        height: 20px;
+        margin-left: 10px;
+      }
+    }
+    .navGroup {
+      margin-top: 5px;
+      float: right;
+      .navLink {
+        float: left;
+        margin-right: 20px;
+        a {
+          color: $sheeo-black;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    background-color: $bkrp-offWhite;
+    height: calc(100vh - 55px);
+    overflow: scroll;
+    position: fixed;
+    top: 55px;
+    width: 16.6666%;
+    .sidebarLinkContainer {
+      a.sidebarLink {
+        width: 100%;
+        height: 100px;
+        padding: 10px 20px;
+        border-bottom: solid 1px $bkrp-white;
+        float: left;
+        color: $bkrp-black;
+        .section {
+          font-size: 10px;
+          text-transform: uppercase;
+          color: $bkrp-grey;
+          opacity: 0.5;
+        }
+        .badge {
+          font-weight: 600;
+          font-size: 10px;
+          padding: 5px;
+          text-transform: uppercase;
+          float: right;
+        }
+      }
+      a.sidebarLink:hover {
+        text-decoration: none;
+        background-color: $bkrp-white;
+      }
+      .activeSection {
+        background-color: $bkrp-white;
+      }
+    }
+  }
+
+  .stepContainer {
+    padding: 20px 40px 200px 40px;
+
+    h3 {
+      margin-top: 40px;
+    }
+    .filingTitle {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .filingDescription {
+      margin-bottom: 30px;
+    }
+
+    .progressBar {
+      margin-bottom: 30px;
+    }
+
+    img.questionMark {
+      width: 20px;
+      margin-left: 5px;
+    }
+    img.questionMark:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .textInput,
+    .checkbox,
+    .dropdown {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .checkbox {
+      float: left;
+      margin-right: 10px;
+      input[type="checkbox"] {
+        display: none;
+      }
+      label {
+        background-color: $bkrp-grey;
+        color: $bkrp-white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+        display: block;
+        float: left;
+      }
+      .checkboxIcon {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        margin-right: 5px;
+        background-image: url("https://images.ctfassets.net/7j0ebn7o8am7/52gqjEHX2VQZ5KsvSWzNFw/b9adb14553a6d8b924f1ba057a095565/noun_checkmark_160932-empty.png");
+      }
+      label:hover {
+        cursor: pointer;
+      }
+      input[type="checkbox"]:checked + label .checkboxIcon {
+        background-image: url("https://images.ctfassets.net/7j0ebn7o8am7/2sXC9YvyeMSzVE0bv6rJH3/f8855752b1a3de4092a42592ef6e0463/noun_checkmark_160932.png") !important;
+      }
+      input[type="checkbox"]:checked + label {
+        background-color: $bkrp-success;
+      }
+    }
+    .checkbox:hover {
+      cursor: pointer;
+    }
+
+    label {
+      margin-bottom: 0px;
+    }
+    .form-text {
+      margin-top: 0px;
+    }
+    input,
+    select {
+      margin-top: 10px;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+      height: calc(1.5em + 1rem + 2px);
+    }
+    select optgroup {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0px;
+    }
+  }
+  .tableForm {
+    textarea {
+      font-size: 12px;
+    }
+    .firstRow {
+      border-bottom: solid 3px $bkrp-offWhite;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+    }
+    .tableRow {
+      .label {
+        padding-top: 15px;
+        font-size: 18px;
+      }
+    }
+    .checkbox {
+      label {
+        background-color: $bkrp-offWhite;
+        border: solid 1px $bkrp-offWhite;
+        color: $bkrp-grey;
+        padding: 8px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 100%;
+        display: block;
+        float: left;
+      }
+      input[type="checkbox"]:checked + label {
+        background-color: $bkrp-success;
+        color: $bkrp-white;
+      }
+      .checkboxIcon {
+      }
+    }
+    .small {
+      select {
+        font-size: 12px;
+      }
+      input {
+        font-size: 12px;
+      }
+    }
+  }
+  .sectionBottom {
+    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    border-top: solid 1px $bkrp-offWhite;
+    width: 100%;
+    float: left;
+    .nextButton,
+    .prevButton {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+}
+
+.price {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.prePrice {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.clients {
+  padding: 30px;
+}
+
+.signup {
+  width: 500px;
+  border: solid 1px $bkrp-offWhite;
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px 80px;
+  text-align: center;
+  margin-top: 30px;
+  .description {
+    margin-bottom: 20px;
+  }
+  form {
+    width: 350px;
+    margin: auto;
+    input {
+      padding: 10px 10px;
+      font-size: 25px;
+      border-radius: 10px;
+      border: solid 1px $bkrp-offWhite;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+export const LANDING = "/";
+export const ACCESS_DENIED = "/access-denied";
+export const SIGN_UP = "/signup";
+export const SIGN_IN = "/signin";
+export const PROFILESTEP = "/profile/:step";
+export const FILINGSTEPCLIENT = "/filing/:step/:client";
+export const PROFILE = "/profile/personalInfo";
+export const CLIENTS = "/clients";
+export const ACCOUNT = "/account";
+export const ADMIN = "/admin";
+export const PASSWORD_FORGET = "/pw-forget";
+export const CHECK_EMAIL = "/check-email";
+export const ACTIVATORFLOW = "/become-an-activator";
+export const EVENTS = "/events";
+export const EVENTSFORM = "/events/:formId";

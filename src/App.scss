@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+$sheeo-teal: #0b84a8;
+$sheeo-lightTeal: #80d5e3;
+$sheeo-grey: #54595f;
+$sheeo-lightGrey: #ccc;
+$sheeo-red: #ce2025;
+$sheeo-purple: #7515d9;
+$sheeo-black: #000;
+$sheeo-white: #fff;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landingContainer {
+  font-family: "Red Hat Display", sans-serif;
+  .topBar {
+    height: 50px;
+    background: $sheeo-teal;
+  }
+  .logoBar {
+    background: $sheeo-white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px $sheeo-teal;
+    margin-bottom: 40px;
+    .logo {
+      width: 200px;
+      margin: auto;
+      img {
+        width: 200px;
+        margin: auto;
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 70px;
+    margin-bottom: 15px;
+  }
+  .description {
+    text-align: center;
+    font-size: 24px;
+    width: 600px;
+    margin: auto;
+    line-height: 36px;
+  }
+  .paymentOptions {
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .ctaContainer {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .primary-cta {
+    font-size: 18px;
+    font-weight: 700;
+    fill: #fff;
+    color: #fff;
+    background-color: $sheeo-teal;
+    border-radius: 0;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+  .primary-cta:hover {
+    text-decoration: none;
+    background-color: $sheeo-lightTeal;
+  }
+  .price {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .period {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .regionContainer {
+    width: 750px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .description {
+      font-size: 14px;
+    }
+    .regionButton {
+      border: solid 2px $sheeo-red;
+      border-radius: 5px;
+      padding: 5px 10px;
+      width: 140px;
+      float: left;
+      margin-right: 10px;
+      color: $sheeo-red;
+      font-weight: 600;
+    }
+    .regionButton:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+    .active {
+      color: $sheeo-white;
+      background: $sheeo-red;
+    }
+  }
+}

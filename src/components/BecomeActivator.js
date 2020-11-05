@@ -1,14 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/sheeologo.png";
 import { Row, Col, Card } from "react-bootstrap";
 import RegionButton from "./RegionButton";
+import axios from "axios";
+
 const BecomeActivator = (props) => {
   const [region, setRegion] = useState("CA");
   // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
 
-  const handleClick = (value) => {
-    setRegion(value);
-  };
+  useEffect(() => {
+    axios
+      .get("https://ipapi.co/json/")
+      .then((response) => {
+        let data = response.data;
+        console.log(data);
+        if (
+          data["country_code"] === "CA" ||
+          data["country_code"] === "US" ||
+          data["country_code"] === "UK" ||
+          data["country_code"] === "NZ" ||
+          data["country_code"] === "AU"
+        ) {
+          setRegion(data["country_code"]);
+        }
+        if (data["country_code"] === "GB" || data["country_code"] === "IE") {
+          setRegion("UK");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const pricing = {
     CA: {

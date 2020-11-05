@@ -4,7 +4,6 @@ const RegionButton = (props) => {
   const [selected, setSelected] = useState(false);
 
   useEffect(() => {
-    console.log(props.selected);
     if (props.selected === props.region) {
       setSelected(true);
     } else {

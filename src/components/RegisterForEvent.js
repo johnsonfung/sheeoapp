@@ -4,6 +4,7 @@ import { Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import RegionButton from "./RegionButton";
 import axios from "axios";
 import * as tools from "../functions";
+import * as EmailValidator from "email-validator";
 
 const RegisterForEvent = (props) => {
   const [guestR, setGuestR] = useState("");
@@ -12,6 +13,7 @@ const RegisterForEvent = (props) => {
   const [contactExists, setContactExists] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
 
@@ -20,29 +22,34 @@ const RegisterForEvent = (props) => {
   };
 
   const checkAndRedirect = (email) => {
-    setLoading(true);
-    axios
-      .get(
-        "https://sheeo-server-core.herokuapp.com/salesforce/checkContactByEmail",
-        {
-          params: {
-            email: email,
-          },
-        }
-      )
-      .then((response) => {
-        if (response.data === false) {
-          // Simulate a mouse click:
-          window.location.href =
-            "https://survey.alchemer.com/s3/" + guestR + "?email=" + email;
-        } else if (response.data === true) {
-          window.location.href =
-            "https://survey.alchemer.com/s3/" + memberR + "?email=" + email;
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (!EmailValidator.validate(email)) {
+      setError("Hmm...that email doesn't seem right.");
+    } else {
+      setError("");
+      setLoading(true);
+      axios
+        .get(
+          "https://sheeo-server-core.herokuapp.com/salesforce/checkContactByEmail",
+          {
+            params: {
+              email: email,
+            },
+          }
+        )
+        .then((response) => {
+          if (response.data === false) {
+            // Simulate a mouse click:
+            window.location.href =
+              "https://survey.alchemer.com/s3/" + guestR + "?email=" + email;
+          } else if (response.data === true) {
+            window.location.href =
+              "https://survey.alchemer.com/s3/" + memberR + "?email=" + email;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   useEffect(() => {
@@ -74,6 +81,7 @@ const RegisterForEvent = (props) => {
               value={email}
               onChange={handleChange}
             ></input>
+            {error && <div className="valError">{error}</div>}
           </Col>
         </Row>
         <Row>

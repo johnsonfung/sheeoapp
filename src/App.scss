@@ -105,6 +105,19 @@ $sheeo-white: #fff;
     text-transform: uppercase;
     transition: 0.3s;
   }
+  .loading-cta {
+    font-size: 18px;
+    font-weight: 700;
+    fill: #fff;
+    color: #fff;
+    background-color: $sheeo-teal;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .primary-cta:hover {
     text-decoration: none;
     background-color: $sheeo-lightTeal;
@@ -144,6 +157,33 @@ $sheeo-white: #fff;
     .active {
       color: $sheeo-white;
       background: $sheeo-red;
+    }
+  }
+
+  .eventName {
+    text-align: center;
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .emailEntry {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    border-top: solid 1px $sheeo-lightGrey;
+    padding-top: 20px;
+    input {
+      padding: 10px 20px;
+      font-size: 36px;
+      width: 100%;
+      text-align: center;
+      border-radius: 5px;
+      border: solid 1px $sheeo-lightTeal;
+      margin-bottom: 20px;
     }
   }
 }

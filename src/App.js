@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import BecomeActivator from "./components/BecomeActivator";
+import RegisterForEvent from "./components/RegisterForEvent";
+
 import Home from "./components/Home";
 
 export default function App() {
@@ -11,6 +13,9 @@ export default function App() {
         <Switch>
           <Route path="/become-an-activator">
             <BecomeActivator />
+          </Route>
+          <Route path="/register-for-event">
+            <RegisterForEvent />
           </Route>
           <Route path="/">
             <Home />

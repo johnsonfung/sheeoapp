@@ -8,6 +8,32 @@ const BecomeActivator = (props) => {
   const [region, setRegion] = useState("CA");
   // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
 
+  const loadChargebee = (callback) => {
+    const existingScript = document.getElementById("chargebee");
+
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://js.chargebee.com/v2/chargebee.js";
+      script["data-cb-site"] = "sheeo-test";
+      script.id = "chargebee";
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        if (callback) callback();
+      };
+    }
+
+    if (existingScript && callback) callback();
+  };
+
+  const scriptStatus = () => {
+    console.log("scriptloaded");
+  };
+
+  useEffect(() => {
+    loadChargebee(scriptStatus);
+  }, [region]);
+
   useEffect(() => {
     axios
       .get("https://ipapi.co/json/")
@@ -32,28 +58,91 @@ const BecomeActivator = (props) => {
       });
   }, []);
 
-  const pricing = {
+  const config = {
     CA: {
-      monthly: "$92",
-      yearly: "$1100",
+      monthly: { pricing: "$92", id: "ca-monthly" },
+      yearly: { pricing: "$1100", id: "ca-annual" },
     },
     US: {
-      monthly: "$92",
-      yearly: "$1100",
+      monthly: { pricing: "$92", id: "us-monthly" },
+      yearly: { pricing: "$1100", id: "us-annual" },
     },
     AU: {
-      monthly: "$92",
-      yearly: "$1100",
+      monthly: { pricing: "$92", id: "au-monthly" },
+      yearly: { pricing: "$1100", id: "au-annual" },
     },
     NZ: {
-      monthly: "$92",
-      yearly: "$1100",
+      monthly: { pricing: "$92", id: "nz-monthly" },
+      yearly: { pricing: "$1100", id: "nz-annual" },
     },
     UK: {
-      monthly: "£71",
-      yearly: "£850",
+      monthly: { pricing: "£71", id: "uk-monthly" },
+      yearly: { pricing: "£850", id: "uk-annual" },
     },
   };
+
+  let regionArray = Object.keys(config);
+
+  let monthlyButtons = regionArray.map((regionCode, index) => {
+    let hideClass = "";
+    if (regionCode !== region) {
+      hideClass = "hidden";
+    }
+
+    return (
+      <Card className={hideClass}>
+        <Card.Body>
+          <Card.Title>Monthly Payments</Card.Title>
+          <div className="price">{config[regionCode].monthly.pricing}</div>
+          <div className="period">per month</div>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <div className="ctaContainer">
+            <a
+              href="javascript:void(0)"
+              data-cb-type="checkout"
+              data-cb-plan-id={config[regionCode].monthly.id}
+              className="primary-cta"
+            >
+              Pay Monthly
+            </a>
+          </div>
+        </Card.Body>
+      </Card>
+    );
+  });
+
+  let yearlyButtons = regionArray.map((regionCode, index) => {
+    let hideClass = "";
+    if (regionCode !== region) {
+      hideClass = "hidden";
+    }
+    return (
+      <Card className={hideClass}>
+        <Card.Body>
+          <Card.Title>Annual Payments</Card.Title>
+          <div className="price">{config[regionCode].yearly.pricing}</div>
+          <div className="period">per year</div>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <div className="ctaContainer">
+            <a
+              href="javascript:void(0)"
+              data-cb-type="checkout"
+              data-cb-plan-id={config[regionCode].yearly.id}
+              className="primary-cta"
+            >
+              Pay Annually
+            </a>
+          </div>
+        </Card.Body>
+      </Card>
+    );
+  });
 
   return (
     <div className="landingContainer">
@@ -104,52 +193,8 @@ const BecomeActivator = (props) => {
 
       <div className="paymentOptions">
         <Row>
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Monthly Payments</Card.Title>
-                <div className="price">{pricing[region].monthly}</div>
-                <div className="period">per month</div>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <div className="ctaContainer">
-                  <a
-                    href="javascript:void(0)"
-                    data-cb-type="checkout"
-                    data-cb-plan-id="ca-1-year-activation"
-                    className="primary-cta"
-                  >
-                    Pay Monthly
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Annual Payments</Card.Title>
-                <div className="price">{pricing[region].yearly}</div>
-                <div className="period">per year</div>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <div className="ctaContainer">
-                  <a
-                    href="javascript:void(0)"
-                    data-cb-type="checkout"
-                    data-cb-plan-id="ca-1-year-activation"
-                    className="primary-cta"
-                  >
-                    Pay Annually
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
+          <Col>{monthlyButtons}</Col>
+          <Col>{yearlyButtons}</Col>
         </Row>
       </div>
     </div>

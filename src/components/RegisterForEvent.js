@@ -5,6 +5,7 @@ import RegionButton from "./RegionButton";
 import axios from "axios";
 import * as tools from "../functions";
 import * as EmailValidator from "email-validator";
+import Markdown from "markdown-to-jsx";
 
 const RegisterForEvent = (props) => {
   const [formUrl, setFormUrl] = useState("");
@@ -14,8 +15,6 @@ const RegisterForEvent = (props) => {
   const [error, setError] = useState("");
   const [eventId, setEventId] = useState("");
   const [eventDetails, setEventDetails] = useState({});
-
-  const event = "test";
 
   // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
 
@@ -61,8 +60,14 @@ const RegisterForEvent = (props) => {
         },
       })
       .then((response) => {
-        if (response && response.length > 0 && response[0].fields) {
-          return response[0].fields;
+        console.log(response.data);
+        if (
+          response &&
+          response.data &&
+          response.data.length > 0 &&
+          response.data[0].fields
+        ) {
+          setEventDetails(response.data[0].fields);
         } else {
           return {};
         }
@@ -77,10 +82,15 @@ const RegisterForEvent = (props) => {
   }, []);
 
   useEffect(() => {
-    setEventDetails(getEventFromAirtable(eventId));
+    if (eventId) {
+      console.log(eventId);
+      getEventFromAirtable(eventId);
+    }
   }, [eventId]);
 
-  console.log(eventDetails);
+  useEffect(() => {
+    setFormUrl(eventDetails.formUrl);
+  }, [eventDetails]);
 
   return (
     <div className="landingContainer">
@@ -90,11 +100,26 @@ const RegisterForEvent = (props) => {
           <img src={logo} />
         </div>
       </div>
+      {eventDetails.eventImage &&
+        eventDetails.eventImage.length > 0 &&
+        eventDetails.eventImage[0].url && (
+          <div className="eventImage">
+            <img src={eventDetails.eventImage[0].url} />
+          </div>
+        )}
       <h4>Registration</h4>
       <div className="eventName">
-        {event && event}
-        {!event && "SheEO Events"}
+        {eventDetails.eventName && eventDetails.eventName}
+        {!eventDetails.eventName && "SheEO Events"}
       </div>
+      {eventDetails.eventDate && (
+        <div className="eventDate">{eventDetails.eventDate}</div>
+      )}
+      {eventDetails.eventDescription && (
+        <div className="eventDescription">
+          <Markdown>{eventDetails.eventDescription}</Markdown>
+        </div>
+      )}
 
       <div className="emailEntry">
         <Row>

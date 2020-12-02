@@ -7,13 +7,15 @@ import * as tools from "../functions";
 import * as EmailValidator from "email-validator";
 
 const RegisterForEvent = (props) => {
-  const [guestR, setGuestR] = useState("");
-  const [memberR, setMemberR] = useState("");
-  const [event, setEvent] = useState("");
+  const [formUrl, setFormUrl] = useState("");
   const [contactExists, setContactExists] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [eventId, setEventId] = useState("");
+  const [eventDetails, setEventDetails] = useState({});
+
+  const event = "test";
 
   // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
 
@@ -39,11 +41,10 @@ const RegisterForEvent = (props) => {
         .then((response) => {
           if (response.data === false) {
             // Simulate a mouse click:
-            window.location.href =
-              "https://survey.alchemer.com/s3/" + guestR + "?email=" + email;
+            window.location.href = formUrl + "?email=" + email + "&type=new";
           } else if (response.data === true) {
             window.location.href =
-              "https://survey.alchemer.com/s3/" + memberR + "?email=" + email;
+              formUrl + "?email=" + email + "&type=returning";
           }
         })
         .catch((error) => {
@@ -52,11 +53,34 @@ const RegisterForEvent = (props) => {
     }
   };
 
+  const getEventFromAirtable = (id) => {
+    axios
+      .get("https://sheeo-server-core.herokuapp.com/airtable/event", {
+        params: {
+          eventId: id,
+        },
+      })
+      .then((response) => {
+        if (response && response.length > 0 && response[0].fields) {
+          return response[0].fields;
+        } else {
+          return {};
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
-    setGuestR(tools.getUrlParameter("guest"));
-    setMemberR(tools.getUrlParameter("member"));
-    setEvent(tools.getUrlParameter("event"));
+    setEventId(tools.getUrlParameter("id"));
   }, []);
+
+  useEffect(() => {
+    setEventDetails(getEventFromAirtable(eventId));
+  }, [eventId]);
+
+  console.log(eventDetails);
 
   return (
     <div className="landingContainer">

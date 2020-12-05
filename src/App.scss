@@ -55,18 +55,47 @@ $sheeo-white: #fff;
     height: 50px;
     background: $sheeo-teal;
   }
-  .logoBar {
+  .logoMenuBar {
     background: $sheeo-white;
+    border-bottom: solid 1px $sheeo-teal;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-bottom: solid 1px $sheeo-teal;
     margin-bottom: 40px;
-    .logo {
-      width: 200px;
+    width: 100%;
+    float: left;
+    .logoMenuContainer {
+      width: 960px;
       margin: auto;
-      img {
+      .logo {
         width: 200px;
-        margin: auto;
+        float: left;
+        img {
+          width: 200px;
+        }
+      }
+      .menuContainer {
+        float: right;
+        margin-top: 0px;
+        .menu {
+          float: left;
+          padding: 10px 25px;
+          .menuText {
+            a {
+              color: $sheeo-black;
+            }
+            a:hover {
+              text-decoration: none;
+            }
+            font-size: 14px;
+            font-weight: bold;
+          }
+          border-bottom: solid $sheeo-white 2px;
+        }
+        .menu:hover {
+          cursor: pointer;
+          border-bottom: solid $sheeo-red 2px;
+          transition: 0.2s;
+        }
       }
     }
   }
@@ -196,6 +225,56 @@ $sheeo-white: #fff;
       font-size: 16px;
       color: $sheeo-red;
       margin-bottom: 20px;
+    }
+  }
+  .autoRenewCheckbox {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landingContainer {
+    h1 {
+      font-size: 36px;
+    }
+    .description {
+      width: 100%;
+      padding: 0px 30px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .regionContainer {
+      width: 100%;
+      padding: 0px 30px;
+      text-align: center;
+      margin-bottom: 10px !important;
+      .regionButton {
+        float: none;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+    }
+    .paymentOptions {
+      width: 100%;
+      padding: 0px 30px;
+      margin-top: 30px;
+      .card {
+        margin-bottom: 20px;
+      }
+    }
+    .logoMenuContainer {
+      width: 200px !important;
+      float: none !important;
+      margin: auto !important;
+      .menuContainer {
+        display: none;
+      }
+    }
+    .primary-cta {
+      font-size: 15px;
+    }
+    .autoRenewCheckbox {
+      font-size: 12px;
     }
   }
 }

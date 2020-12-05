@@ -11,7 +11,7 @@ export default function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/become-an-activator">
+          <Route path="/activate">
             <BecomeActivator />
           </Route>
           <Route path="/register-for-event">

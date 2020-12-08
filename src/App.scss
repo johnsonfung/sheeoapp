@@ -108,10 +108,10 @@ $sheeo-white: #fff;
   }
   .description {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     width: 600px;
     margin: auto;
-    line-height: 36px;
+    line-height: 26px;
   }
   .paymentOptions {
     width: 800px;
@@ -229,6 +229,29 @@ $sheeo-white: #fff;
   }
   .autoRenewCheckbox {
     margin-top: 30px;
+  }
+  .quote {
+    width: 500px;
+    padding: 30px;
+    border: solid 1px $sheeo-lightGrey;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    .quoteIcon img {
+      width: 50px;
+    }
+    .quoteText {
+      font-weight: bold;
+      font-size: 20px;
+      color: rgb(135, 135, 135);
+    }
+    .quoteName {
+      font-weight: bold;
+      font-size: 16px;
+      color: $sheeo-teal;
+      margin-top: 20px;
+    }
   }
 }
 

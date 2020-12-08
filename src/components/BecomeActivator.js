@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../images/sheeologo.png";
+import quoteIcon from "../images/quoteIcon.png";
+
 import { Row, Col, Card, Form } from "react-bootstrap";
 import RegionButton from "./RegionButton";
 import axios from "axios";
@@ -111,8 +113,8 @@ const BecomeActivator = (props) => {
           <div className="price">{config[regionCode].monthly.pricing}</div>
           <div className="period">per month</div>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Activate for 12 monthly payments of{" "}
+            {config[regionCode].monthly.pricing}
           </Card.Text>
           <div className="ctaContainer">
             <a
@@ -150,8 +152,7 @@ const BecomeActivator = (props) => {
           <div className="price">{config[regionCode].yearly.pricing}</div>
           <div className="period">per year</div>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Activate for a yearly payment of {config[regionCode].yearly.pricing}
           </Card.Text>
           <div className="ctaContainer">
             <a
@@ -172,7 +173,7 @@ const BecomeActivator = (props) => {
             </a>
             <Form.Check
               type="checkbox"
-              label="Auto-renew at the end of the year"
+              label="Would you like to make this a recurring annual payment?"
               checked={autoRenewAnnual}
               onChange={handleAutoRenewCheck}
               className="autoRenewCheckbox"
@@ -228,10 +229,12 @@ const BecomeActivator = (props) => {
         </div>
       </div>
 
-      <h1>Become an activator</h1>
+      <h1>Become an Activator</h1>
       <div className="description">
-        Join a global community of radically generous women + together we'll
-        work to transform systems.
+        Your contribution will help fund women entrepreneurs working on the
+        World’s To-Do List and you’ll join a global community of radically
+        generous women. Participate in weekly calls, SheEO’s online community,
+        Ask/Give platform, Learning Circles + more - on your own terms.
       </div>
       <div className="regionContainer">
         <div className="description">Choose your region:</div>
@@ -276,6 +279,16 @@ const BecomeActivator = (props) => {
             {yearlyButtons}
           </Col>
         </Row>
+      </div>
+      <div className="quote">
+        <div className="quoteIcon">
+          <img src={quoteIcon} />
+        </div>
+        <div className="quoteText">
+          "I activated only a week ago, and it's already the best thing I've
+          done this year!"
+        </div>
+        <div className="quoteName">- Jen Batley, SheEO Activator, she/her</div>
       </div>
     </div>
   );

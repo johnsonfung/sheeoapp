@@ -157,6 +157,9 @@ $sheeo-white: #fff;
   .price {
     font-size: 50px;
     font-weight: bold;
+    .asterisk {
+      font-size: 20px;
+    }
   }
   .period {
     margin-top: -10px;
@@ -171,6 +174,7 @@ $sheeo-white: #fff;
     margin-bottom: 50px;
     .description {
       font-size: 14px;
+      margin-bottom: 10px;
     }
     .regionButton {
       border: solid 2px $sheeo-red;
@@ -253,6 +257,10 @@ $sheeo-white: #fff;
       margin-top: 20px;
     }
   }
+  .transactionFees {
+    font-size: 12px;
+    margin-top: 5px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -285,6 +293,7 @@ $sheeo-white: #fff;
         margin-bottom: 20px;
       }
     }
+
     .logoMenuContainer {
       width: 200px !important;
       float: none !important;

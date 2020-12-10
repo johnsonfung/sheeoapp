@@ -111,10 +111,18 @@ const BecomeActivator = (props) => {
         <Card.Body>
           <Card.Title>Monthly Payments</Card.Title>
           <div className="price">{config[regionCode].monthly.pricing}</div>
-          <div className="period">per month</div>
+          <div className="period">
+            per month
+            {(region === "AU" || region === "NZ" || region === "UK") && (
+              <span className="asterisk">*</span>
+            )}
+          </div>
           <Card.Text>
             Activate for 12 monthly payments of{" "}
             {config[regionCode].monthly.pricing}
+            {(region === "AU" || region === "NZ" || region === "UK") && (
+              <div className="transactionFees">*plus transaction fees</div>
+            )}
           </Card.Text>
           <div className="ctaContainer">
             <a
@@ -150,9 +158,17 @@ const BecomeActivator = (props) => {
         <Card.Body>
           <Card.Title>Annual Payments</Card.Title>
           <div className="price">{config[regionCode].yearly.pricing}</div>
-          <div className="period">per year</div>
+          <div className="period">
+            per year
+            {(region === "AU" || region === "NZ" || region === "UK") && (
+              <span className="asterisk">*</span>
+            )}
+          </div>
           <Card.Text>
             Activate for a yearly payment of {config[regionCode].yearly.pricing}
+            {(region === "AU" || region === "NZ" || region === "UK") && (
+              <div className="transactionFees">*plus transaction fees</div>
+            )}
           </Card.Text>
           <div className="ctaContainer">
             <a

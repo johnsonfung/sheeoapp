@@ -95,11 +95,48 @@ const RegisterForEvent = (props) => {
   return (
     <div className="landingContainer">
       <div className="topBar"></div>
-      <div className="logoBar">
-        <div className="logo">
-          <img src={logo} />
+      <div className="logoMenuBar">
+        <div className="logoMenuContainer">
+          <div className="logo">
+            <a href="https://sheeo.world">
+              <img src={logo} />
+            </a>
+          </div>
+          <div className="menuContainer">
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://sheeo.world/about-us/">About Us</a>
+              </div>
+            </div>
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://sheeo.world/activators/">Activators</a>
+              </div>
+            </div>
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://sheeo.world/ventures/">Ventures</a>
+              </div>
+            </div>
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://community.sheeo.world/events">Events</a>
+              </div>
+            </div>
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://sheeo.world/learn/">Learn</a>
+              </div>
+            </div>
+            <div className="menu">
+              <div className="menuText">
+                <a href="https://sheeo.world/connect/">Connect</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       {eventDetails.eventImage &&
         eventDetails.eventImage.length > 0 &&
         eventDetails.eventImage[0].url && (

@@ -78,7 +78,7 @@ const RegisterForEvent = (props) => {
   };
 
   useEffect(() => {
-    setEventId(tools.getUrlParameter("id"));
+    setEventId(tools.getUrlParameter("eventID"));
   }, []);
 
   useEffect(() => {

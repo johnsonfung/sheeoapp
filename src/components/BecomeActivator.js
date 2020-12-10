@@ -14,7 +14,7 @@ const BecomeActivator = (props) => {
   const loadChargebee = (callback) => {
     const existingScript = document.getElementById("chargebee");
 
-    const environment = "stage";
+    const environment = "prod";
 
     if (!existingScript) {
       const script = document.createElement("script");

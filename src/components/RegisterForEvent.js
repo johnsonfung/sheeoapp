@@ -6,6 +6,7 @@ import axios from "axios";
 import * as tools from "../functions";
 import * as EmailValidator from "email-validator";
 import Markdown from "markdown-to-jsx";
+import Moment from 'react-moment';
 
 const RegisterForEvent = (props) => {
   const [formUrl, setFormUrl] = useState("");
@@ -150,7 +151,7 @@ const RegisterForEvent = (props) => {
         {!eventDetails.eventName && "SheEO Events"}
       </div>
       {eventDetails.eventDate && (
-        <div className="eventDate">{eventDetails.eventDate}</div>
+        <div className="eventDate"><Moment format="MMMM D, YYYY" date={eventDetails.eventDate} /></div>
       )}
       {eventDetails.eventDescription && (
         <div className="eventDescription">

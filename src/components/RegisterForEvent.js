@@ -40,10 +40,10 @@ const RegisterForEvent = (props) => {
         .then((response) => {
           if (response.data === false) {
             // Simulate a mouse click:
-            window.location.href = formUrl + "?email=" + email + "&type=new";
+            window.location.href = formUrl + "?email=" + email + "&type=new&eventid="+eventId;
           } else if (response.data === true) {
             window.location.href =
-              formUrl + "?email=" + email + "&type=returning";
+              formUrl + "?email=" + email + "&type=returning&eventid="+eventId;
           }
         })
         .catch((error) => {

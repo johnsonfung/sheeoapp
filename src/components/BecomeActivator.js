@@ -73,27 +73,27 @@ const BecomeActivator = (props) => {
 
   const config = {
     CA: {
-      monthly: { pricing: "$92", id: "ca-monthly" },
+      monthly: { pricing: "$92", id: "ca-monthly-ongoing" },
       yearly: { pricing: "$1100", id: "ca-annual" },
       yearlySingle: { pricing: "$1100", id: "ca-single-year" },
     },
     US: {
-      monthly: { pricing: "$92", id: "us-monthly" },
+      monthly: { pricing: "$92", id: "us-monthly-ongoing" },
       yearly: { pricing: "$1100", id: "us-annual" },
       yearlySingle: { pricing: "$1100", id: "us-single-year" },
     },
     AU: {
-      monthly: { pricing: "$92", id: "au-monthly" },
+      monthly: { pricing: "$92", id: "au-monthly-ongoing" },
       yearly: { pricing: "$1100", id: "au-annual" },
       yearlySingle: { pricing: "$1100", id: "au-single-year" },
     },
     NZ: {
-      monthly: { pricing: "$92", id: "nz-monthly" },
+      monthly: { pricing: "$92", id: "nz-monthly-ongoing" },
       yearly: { pricing: "$1100", id: "nz-annual" },
       yearlySingle: { pricing: "$1100", id: "nz-single-year" },
     },
     UK: {
-      monthly: { pricing: "£71", id: "uk-monthly" },
+      monthly: { pricing: "£71", id: "uk-monthly-ongoing" },
       yearly: { pricing: "£850", id: "uk-annual" },
       yearlySingle: { pricing: "£850", id: "uk-single-year" },
     },
@@ -117,13 +117,13 @@ const BecomeActivator = (props) => {
               <span className="asterisk">*</span>
             )}
           </div>
-          <Card.Text>
+          {/* <Card.Text>
             Activate for 12 monthly payments of{" "}
             {config[regionCode].monthly.pricing}
             {(region === "AU" || region === "NZ" || region === "UK") && (
               <div className="transactionFees">*plus transaction fees</div>
             )}
-          </Card.Text>
+          </Card.Text> */}
           <div className="ctaContainer">
             <a
               href="javascript:void(0)"
@@ -164,12 +164,13 @@ const BecomeActivator = (props) => {
               <span className="asterisk">*</span>
             )}
           </div>
+          {/*
           <Card.Text>
             Activate for a yearly payment of {config[regionCode].yearly.pricing}
             {(region === "AU" || region === "NZ" || region === "UK") && (
               <div className="transactionFees">*plus transaction fees</div>
             )}
-          </Card.Text>
+            </Card.Text>*/}
           <div className="ctaContainer">
             <a
               href="javascript:void(0)"

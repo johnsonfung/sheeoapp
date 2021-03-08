@@ -124,6 +124,11 @@ const BecomeActivator = (props) => {
               <div className="transactionFees">*plus transaction fees</div>
             )}
           </Card.Text> */}
+           {(region === "AU" || region === "NZ" || region === "UK") && (
+             <Card.Text>
+              <div className="transactionFees">*plus transaction fees</div>
+              </Card.Text>
+            )}
           <div className="ctaContainer">
             <a
               href="javascript:void(0)"
@@ -171,6 +176,10 @@ const BecomeActivator = (props) => {
               <div className="transactionFees">*plus transaction fees</div>
             )}
             </Card.Text>*/}
+                        {(region === "AU" || region === "NZ" || region === "UK") && (
+                          <Card.Text>
+              <div className="transactionFees">*plus transaction fees</div></Card.Text>
+            )}
           <div className="ctaContainer">
             <a
               href="javascript:void(0)"

@@ -255,12 +255,12 @@ const BecomeActivator = (props) => {
         </div>
       </div>
 
-      <h1>Become an Activator</h1>
+      <h1>Activate today</h1>
       <div className="description">
         Your contribution will help fund women entrepreneurs working on the
         World’s To-Do List and you’ll join a global community of radically
         generous women. Participate in weekly calls, SheEO’s online community,
-        Ask/Give platform, Learning Circles + more - on your own terms.
+        Ask/Give platform, Learning Circles + more - on your own terms.<br/><br/><i>*If you're re-activating, please use your existing Activator email address.</i>
       </div>
       <div className="regionContainer">
         <div className="description">Choose your region:</div>

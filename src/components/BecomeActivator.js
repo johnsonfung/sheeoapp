@@ -247,10 +247,11 @@ const BecomeActivator = (props) => {
 
       <h1>Become an Activator</h1>
       <div className="description">
-        Your contribution will help fund women entrepreneurs working on the
-        World’s To-Do List and you’ll join a global community of radically
-        generous women. Participate in weekly calls, SheEO’s online community,
-        Ask/Give platform, Learning Circles + more - on your own terms.
+        Your contribution will fund women + non-binary entrepreneurs working on
+        the World’s To-Do List and you’ll join a global community of radically
+        generous Activators + Ventures. Build relationships, receive and offer
+        support, and participate in Venture selection, Community Calls, Learning
+        Circles + more - on your own terms.
       </div>
       <div className="regionContainer">
         <div className="description">Choose your region:</div>

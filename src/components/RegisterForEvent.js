@@ -6,7 +6,6 @@ import axios from "axios";
 import * as tools from "../functions";
 import * as EmailValidator from "email-validator";
 import Markdown from "markdown-to-jsx";
-import Moment from 'react-moment';
 
 const RegisterForEvent = (props) => {
   const [formUrl, setFormUrl] = useState("");
@@ -41,10 +40,10 @@ const RegisterForEvent = (props) => {
         .then((response) => {
           if (response.data === false) {
             // Simulate a mouse click:
-            window.location.href = formUrl + "?email=" + email + "&type=new&eventid="+eventId;
+            window.location.href = formUrl + "?email=" + email + "&type=new";
           } else if (response.data === true) {
             window.location.href =
-              formUrl + "?email=" + email + "&type=returning&eventid="+eventId;
+              formUrl + "?email=" + email + "&type=returning";
           }
         })
         .catch((error) => {
@@ -151,7 +150,7 @@ const RegisterForEvent = (props) => {
         {!eventDetails.eventName && "SheEO Events"}
       </div>
       {eventDetails.eventDate && (
-        <div className="eventDate"><Moment format="MMMM D, YYYY" date={eventDetails.eventDate} /></div>
+        <div className="eventDate">{eventDetails.eventDate}</div>
       )}
       {eventDetails.eventDescription && (
         <div className="eventDescription">

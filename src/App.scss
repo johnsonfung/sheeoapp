@@ -196,24 +196,8 @@ $sheeo-white: #fff;
     }
   }
 
-  .eventImage {
-    width: 780px;
-    margin:auto;
-    img {
-      width: 780px;
-    }
-    margin-bottom: 40px;
-  }
-
-  .eventDate {
-    text-align:center;
-    font-size: 14px;
-  }
-
-  .eventDescription{
-    width: 500px;
-    margin:auto;
-    margin-top: 20px;
+  .eventImage img {
+    width: 100%;
   }
 
   .eventName {
@@ -232,7 +216,6 @@ $sheeo-white: #fff;
     margin-top: 20px;
     border-top: solid 1px $sheeo-lightGrey;
     padding-top: 20px;
-    margin-bottom: 150px;
     input {
       padding: 10px 20px;
       font-size: 36px;
@@ -330,32 +313,6 @@ $sheeo-white: #fff;
     }
     .autoRenewCheckbox {
       font-size: 12px;
-    }
-
-    .eventImage {
-      width: 100%!important;
-      img {
-        width: 100%!important;
-      }
-    }
-
-    .emailEntry {
-      width: 100%;
-      padding: 0px 20px;
-      .emailInput {
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight:bold;
-      }
-    }
-
-    .eventName {
-      padding: 0px 20px;
-    }
-
-    .eventDescription {
-      width: 100%;
-      padding: 0px 20px 0px 20px;
     }
   }
 }

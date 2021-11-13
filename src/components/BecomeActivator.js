@@ -239,7 +239,7 @@ const BecomeActivator = (props) => {
             </div>
             <div className="menu">
               <div className="menuText">
-                <a href="https://community.sheeo.world/events">Events</a>
+                <a href="https://sheeo.world/events/">Events</a>
               </div>
             </div>
             <div className="menu">

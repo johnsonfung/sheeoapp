@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/sheeologo.png";
+import logo from "../images/coraluslogo.png";
 import { Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import RegionButton from "./RegionButton";
 import axios from "axios";
 import * as tools from "../functions";
 import * as EmailValidator from "email-validator";
 import Markdown from "markdown-to-jsx";
-import Moment from 'react-moment';
+import Moment from "react-moment";
 
 const RegisterForEvent = (props) => {
   const [formUrl, setFormUrl] = useState("");
@@ -41,10 +41,15 @@ const RegisterForEvent = (props) => {
         .then((response) => {
           if (response.data === false) {
             // Simulate a mouse click:
-            window.location.href = formUrl + "?email=" + email + "&type=new&eventid="+eventId;
+            window.location.href =
+              formUrl + "?email=" + email + "&type=new&eventid=" + eventId;
           } else if (response.data === true) {
             window.location.href =
-              formUrl + "?email=" + email + "&type=returning&eventid="+eventId;
+              formUrl +
+              "?email=" +
+              email +
+              "&type=returning&eventid=" +
+              eventId;
           }
         })
         .catch((error) => {
@@ -103,7 +108,7 @@ const RegisterForEvent = (props) => {
               <img src={logo} />
             </a>
           </div>
-          <div className="menuContainer">
+          {/* <div className="menuContainer">
             <div className="menu">
               <div className="menuText">
                 <a href="https://sheeo.world/about-us/">About Us</a>
@@ -134,7 +139,7 @@ const RegisterForEvent = (props) => {
                 <a href="https://sheeo.world/connect/">Connect</a>
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
 
@@ -148,10 +153,12 @@ const RegisterForEvent = (props) => {
       <h4>Registration</h4>
       <div className="eventName">
         {eventDetails.eventName && eventDetails.eventName}
-        {!eventDetails.eventName && "SheEO Events"}
+        {!eventDetails.eventName && "Coralus Events"}
       </div>
       {eventDetails.eventDate && (
-        <div className="eventDate"><Moment format="MMMM D, YYYY" date={eventDetails.eventDate} /></div>
+        <div className="eventDate">
+          <Moment format="MMMM D, YYYY" date={eventDetails.eventDate} />
+        </div>
       )}
       {eventDetails.eventDescription && (
         <div className="eventDescription">

@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 const Home = () => {
-  // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  useEffect(() => {
+    window.location.replace("https://coralus.world");
+  }, []);
+  return <div>Redirecting you to Coralus...</div>;
 };
 
 export default Home;

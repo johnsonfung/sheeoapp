@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/sheeologo.png";
+import logo from "../images/coraluslogo.png";
 import quoteIcon from "../images/quoteIcon.png";
 
 import { Row, Col, Card, Form } from "react-bootstrap";
@@ -217,11 +217,11 @@ const BecomeActivator = (props) => {
       <div className="logoMenuBar">
         <div className="logoMenuContainer">
           <div className="logo">
-            <a href="https://sheeo.world">
+            <a href="https://www.coralus.world">
               <img src={logo} />
             </a>
           </div>
-          <div className="menuContainer">
+          {/*<div className="menuContainer">
             <div className="menu">
               <div className="menuText">
                 <a href="https://sheeo.world/about-us/">About Us</a>
@@ -252,7 +252,7 @@ const BecomeActivator = (props) => {
                 <a href="https://sheeo.world/connect/">Connect</a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -316,7 +316,9 @@ const BecomeActivator = (props) => {
           "I activated only a week ago, and it's already the best thing I've
           done this year!"
         </div>
-        <div className="quoteName">- Jen Batley, SheEO Activator, she/her</div>
+        <div className="quoteName">
+          - Jen Batley, Coralus Activator, she/her
+        </div>
       </div>
     </div>
   );

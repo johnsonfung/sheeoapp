@@ -8,6 +8,13 @@ import * as EmailValidator from "email-validator";
 import Markdown from "markdown-to-jsx";
 import Moment from "react-moment";
 
+let sheeoServerURL = "";
+if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+  sheeoServerURL = "http://127.0.0.1:5001/sheeo-5d029/us-central1/api";
+} else {
+  sheeoServerURL = "https://us-central1-sheeo-5d029.cloudfunctions.net/api";
+}
+
 const RegisterForEvent = (props) => {
   const [formUrl, setFormUrl] = useState("");
   const [contactExists, setContactExists] = useState(false);
@@ -30,14 +37,11 @@ const RegisterForEvent = (props) => {
       setError("");
       setLoading(true);
       axios
-        .get(
-          "https://sheeo-server-core.herokuapp.com/salesforce/checkContactByEmail",
-          {
-            params: {
-              email: email,
-            },
-          }
-        )
+        .get(sheeoServerURL + "/salesforce/checkContactByEmail", {
+          params: {
+            email: email,
+          },
+        })
         .then((response) => {
           if (response.data === false) {
             // Simulate a mouse click:
@@ -60,7 +64,7 @@ const RegisterForEvent = (props) => {
 
   const getEventFromAirtable = (id) => {
     axios
-      .get("https://sheeo-server-core.herokuapp.com/airtable/event", {
+      .get(sheeoServerURL + "/airtable/event", {
         params: {
           eventId: id,
         },

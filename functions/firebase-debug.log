@@ -1,0 +1,280 @@
+[debug] [2024-02-16T05:00:16.529Z] ----------------------------------------------------------------------
+[debug] [2024-02-16T05:00:16.530Z] Command:       /Users/johnsonfung/.nvm/versions/node/v18.2.0/bin/node /Users/johnsonfung/.nvm/versions/node/v18.2.0/bin/firebase emulators:start
+[debug] [2024-02-16T05:00:16.531Z] CLI Version:   11.24.1
+[debug] [2024-02-16T05:00:16.531Z] Platform:      darwin
+[debug] [2024-02-16T05:00:16.531Z] Node Version:  v18.2.0
+[debug] [2024-02-16T05:00:16.533Z] Time:          Fri Feb 16 2024 12:00:16 GMT+0700 (Indochina Time)
+[debug] [2024-02-16T05:00:16.533Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-16T05:00:16.564Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-16T05:00:16.564Z] > authorizing via signed-in user (johnson@chabomakers.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2024-02-16T05:00:16.976Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] ⚠  hosting: Hosting Emulator unable to start on port 5000, starting on 5002 instead. {"metadata":{"emulator":{"name":"hosting"},"message":"Hosting Emulator unable to start on port 5000, starting on 5002 instead."}}
+[debug] [2024-02-16T05:00:16.977Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-16T05:00:16.977Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-02-16T05:00:16.979Z] [hub] writing locator at /var/folders/8r/_nbls8qx3fn81qr279tzfdw80000gn/T/hub-sheeo-5d029.json
+[debug] [2024-02-16T05:00:17.165Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-16T05:00:17.165Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-16T05:00:17.165Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[debug] [2024-02-16T05:00:17.172Z] defaultcredentials: writing to file /Users/johnsonfung/.config/firebase/johnson_chabomakers_com_application_default_credentials.json
+[debug] [2024-02-16T05:00:17.173Z] Setting GAC to /Users/johnsonfung/.config/firebase/johnson_chabomakers_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/johnsonfung/.config/firebase/johnson_chabomakers_com_application_default_credentials.json"}}
+[debug] [2024-02-16T05:00:17.175Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/adminSdkConfig [none]
+[debug] [2024-02-16T05:00:18.150Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/adminSdkConfig 200
+[debug] [2024-02-16T05:00:18.150Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/adminSdkConfig {"projectId":"sheeo-5d029","databaseURL":"https://sheeo-5d029.firebaseio.com","storageBucket":"sheeo-5d029.appspot.com","locationId":"us-central"}
+[debug] [2024-02-16T05:00:18.163Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sheeo-5d029/sites 
+[debug] [2024-02-16T05:00:18.784Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sheeo-5d029/sites 200
+[debug] [2024-02-16T05:00:18.784Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sheeo-5d029/sites {"sites":[{"name":"projects/sheeo-5d029/sites/sheeo-5d029","defaultUrl":"https://sheeo-5d029.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-02-16T05:00:18.785Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/webApps/-/config [none]
+[debug] [2024-02-16T05:00:20.006Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/webApps/-/config 200
+[debug] [2024-02-16T05:00:20.006Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029/webApps/-/config {"projectId":"sheeo-5d029","appId":"1:509816580159:web:6f06a6a2d5625fbbcf308a","databaseURL":"https://sheeo-5d029.firebaseio.com","storageBucket":"sheeo-5d029.appspot.com","locationId":"us-central","apiKey":"AIzaSyASSRgZhafOzl_ExT4ifilEIHpraXpGtQs","authDomain":"sheeo-5d029.firebaseapp.com","messagingSenderId":"509816580159","measurementId":"G-1Y0REDLV2X"}
+[debug] [2024-02-16T05:00:20.015Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029 [none]
+[debug] [2024-02-16T05:00:20.348Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029 200
+[debug] [2024-02-16T05:00:20.349Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sheeo-5d029 {"projectId":"sheeo-5d029","projectNumber":"509816580159","displayName":"SheEO","name":"projects/sheeo-5d029","resources":{"hostingSite":"sheeo-5d029","realtimeDatabaseInstance":"sheeo-5d029","storageBucket":"sheeo-5d029.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_c310b60b-2c0f-497d-9ac6-f3b0697e90d7"}
+[info] i  hosting[sheeo-5d029]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[sheeo-5d029]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[debug] [2024-02-16T05:00:20.423Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-02-16T05:00:20.424Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-02-16T05:00:20.424Z] Starting Emulator UI with command {"binary":"node","args":["/Users/johnsonfung/.cache/firebase/emulators/ui-v1.11.4/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/johnsonfung/.cache/firebase/emulators/ui-v1.11.4/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-02-16T05:00:20.487Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-02-16T05:00:20.487Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions\" for Cloud Functions..."}}
+[debug] [2024-02-16T05:00:20.686Z] Validating nodejs source
+[debug] [2024-02-16T05:00:21.135Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "jsforce": "^1.11.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2024-02-16T05:00:21.136Z] Building nodejs source
+[debug] [2024-02-16T05:00:21.136Z] Failed to find version of module node: reached end of search path /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-16T05:00:21.139Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-16T05:00:21.142Z] Found firebase-functions binary at '/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-02-16T05:00:21.259Z] Serving at port 8667
+
+[debug] [2024-02-16T05:00:21.522Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: An API key is required to connect to Airtable
+[debug] [2024-02-16T05:00:21.523Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: An API key is required to conn ... 
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: An API key is required to connect to Airtable\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: An API key is required to conn ... \n                                         ^"}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5002 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-02-16T05:00:24.574Z] File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers"}}
+[debug] [2024-02-16T05:00:25.578Z] Validating nodejs source
+[debug] [2024-02-16T05:00:26.013Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "jsforce": "^1.11.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2024-02-16T05:00:26.014Z] Building nodejs source
+[debug] [2024-02-16T05:00:26.014Z] Failed to find version of module node: reached end of search path /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-16T05:00:26.016Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-16T05:00:26.017Z] Found firebase-functions binary at '/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-02-16T05:00:26.105Z] Serving at port 8484
+
+[debug] [2024-02-16T05:00:26.275Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: An API key is required to connect to Airtable
+[debug] [2024-02-16T05:00:26.276Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: An API key is required to conn ... 
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: An API key is required to connect to Airtable\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: An API key is required to conn ... \n                                         ^"}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable"}}
+[debug] [2024-02-16T05:00:43.593Z] File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers"}}
+[debug] [2024-02-16T05:00:44.602Z] Validating nodejs source
+[debug] [2024-02-16T05:00:45.100Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "jsforce": "^1.11.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2024-02-16T05:00:45.100Z] Building nodejs source
+[debug] [2024-02-16T05:00:45.100Z] Failed to find version of module node: reached end of search path /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-16T05:00:45.102Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-16T05:00:45.103Z] Found firebase-functions binary at '/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-02-16T05:00:45.242Z] Serving at port 8415
+
+[debug] [2024-02-16T05:00:45.502Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: An API key is required to connect to Airtable
+[debug] [2024-02-16T05:00:45.503Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: An API key is required to conn ... 
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: An API key is required to connect to Airtable\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: An API key is required to conn ... \n                                         ^"}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: An API key is required to connect to Airtable"}}
+[debug] [2024-02-16T05:01:21.578Z] File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/index.js changed, reloading triggers"}}
+[debug] [2024-02-16T05:01:22.582Z] Validating nodejs source
+[debug] [2024-02-16T05:01:23.091Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "jsforce": "^1.11.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2024-02-16T05:01:23.091Z] Building nodejs source
+[debug] [2024-02-16T05:01:23.091Z] Failed to find version of module node: reached end of search path /Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-16T05:01:23.098Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-16T05:01:23.100Z] Found firebase-functions binary at '/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-02-16T05:01:23.242Z] Serving at port 8778
+
+[debug] [2024-02-16T05:01:23.504Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/sheeo-5d029/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/sheeo-5d029/us-central1/api)."}}
+[debug] [2024-02-16T05:01:31.927Z] [work-queue] {"queuedWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:01:31.926Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-16T05:01:31.928Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:01:31.926Z"],"workRunningCount":1}
+[debug] [2024-02-16T05:01:31.928Z] Accepted request GET /sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 --> us-central1-api
+[debug] [2024-02-16T05:01:31.930Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-02-16T05:01:31.932Z] [functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-16T05:01:31.949Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-02-16T05:01:31.950Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-02-16T05:01:32.736Z] [runtime-status] [77202] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.737Z] [runtime-status] [77202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.737Z] [runtime-status] [77202] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-02-16T05:01:32.737Z] [runtime-status] [77202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.867Z] [runtime-status] [77202] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-02-16T05:01:32.868Z] [runtime-status] [77202] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-02-16T05:01:32.868Z] [runtime-status] [77202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.868Z] [runtime-status] [77202] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.871Z] [runtime-status] [77202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-16T05:01:32.871Z] [runtime-status] [77202] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-02-16T05:01:33.060Z] [runtime-status] [77202] Functions runtime initialized. {"cwd":"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions","node_version":"18.2.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Functions runtime initialized. {\"cwd\":\"/Users/johnsonfung/Dropbox/Mac/Documents/repos/sheeoapp/functions\",\"node_version\":\"18.2.0\"}"}}
+[debug] [2024-02-16T05:01:33.060Z] [runtime-status] [77202] Listening to port: /var/folders/8r/_nbls8qx3fn81qr279tzfdw80000gn/T/fire_emu_6b6e7b92f76b8484.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [77202] Listening to port: /var/folders/8r/_nbls8qx3fn81qr279tzfdw80000gn/T/fire_emu_6b6e7b92f76b8484.sock"}}
+[debug] [2024-02-16T05:01:33.066Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE"}}
+[debug] [2024-02-16T05:01:33.066Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-02-16T05:01:33.067Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api.airtable.com/v0/appdHeqAxUrtGCGFM/regPages?maxRecords=1&filterByFormula=eventID%3D%272024-Rooted-to-the-Land-Sessions-1%27"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api.airtable.com/v0/appdHeqAxUrtGCGFM/regPages?maxRecords=1&filterByFormula=eventID%3D%272024-Rooted-to-the-Land-Sessions-1%27\"\n - Be careful, this may be a production service."}}
+[info] i  functions: Finished "us-central1-api" in 2969.369708ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2969.369708ms"}}
+[debug] [2024-02-16T05:01:36.038Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE"}}
+[debug] [2024-02-16T05:01:36.039Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-16T05:05:24.117Z] [work-queue] {"queuedWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:05:24.117Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-16T05:05:24.124Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:05:24.117Z"],"workRunningCount":1}
+[debug] [2024-02-16T05:05:24.124Z] Accepted request GET /sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 --> us-central1-api
+[debug] [2024-02-16T05:05:24.126Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-02-16T05:05:24.127Z] [functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1"}}
+[debug] [2024-02-16T05:05:24.128Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-02-16T05:05:24.129Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY"}}
+[info] i  functions: Finished "us-central1-api" in 1282.992958ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1282.992958ms"}}
+[debug] [2024-02-16T05:05:25.414Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE"}}
+[debug] [2024-02-16T05:05:25.414Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-16T05:12:57.126Z] [work-queue] {"queuedWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:12:57.125Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-16T05:12:57.127Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/sheeo-5d029/us-central1/api/airtable/event-2024-02-16T05:12:57.125Z"],"workRunningCount":1}
+[debug] [2024-02-16T05:12:57.127Z] Accepted request GET /sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 --> us-central1-api
+[debug] [2024-02-16T05:12:57.130Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-02-16T05:12:57.130Z] [functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/sheeo-5d029/us-central1/api/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1, mapping to path=/airtable/event?eventId=2024-Rooted-to-the-Land-Sessions-1"}}
+[debug] [2024-02-16T05:12:57.133Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-02-16T05:12:57.135Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: BUSY"}}
+[info] i  functions: Finished "us-central1-api" in 2936.044875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2936.044875ms"}}
+[debug] [2024-02-16T05:13:00.073Z] [worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-4ba7188d-f611-4145-b176-7a949d99865a]: IDLE"}}
+[debug] [2024-02-16T05:13:00.074Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
